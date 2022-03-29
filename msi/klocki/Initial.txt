@@ -1,0 +1,6 @@
+CreateBlocks(4)
+ontable('A')
+on('B','A')
+on('C','B')
+holding('D')
+DrawBlocks

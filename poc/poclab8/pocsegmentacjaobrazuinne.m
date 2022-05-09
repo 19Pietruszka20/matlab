@@ -1,0 +1,23 @@
+clear all;
+clc;
+I = imread('krzaczkigray512x512.png');
+figure;
+imshow(I);
+BI=im2bw(I,0.4);
+BIL=bwlabel(BI);
+RGB=label2rgb(BIL);
+level = graythresh(I);
+% Histogram
+figure;
+imhist(I);
+figure;
+imshow(RGB);
+figure;
+imshow(BI);
+BIGT=im2bw(I, level);
+BIGTL=bwlabel(BIGT);
+RGBGT=label2rgb(BIGTL);
+figure;
+imshow(BIGT);
+figure;
+imshow(RGBGT);
